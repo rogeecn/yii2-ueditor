@@ -1,6 +1,6 @@
 Yii2 Baidu UEditor
 ==================
-baidu ueditor  for yii2 framework
+baidu ueditor for yii2 framework
 
 Installation
 ------------
@@ -28,4 +28,5 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \UEditor\AutoloadExample::widget(); ?>```
+<?= \UEditor\AutoloadExample::widget(); ?>
+```

@@ -10,6 +10,7 @@ class MiniAssets extends AssetBundle
     public $js = [
         'umeditor.config.js',
         'umeditor.min.js',
+        'zh-cn/zh-cn.js',
     ];
     public $css=[
         'themes/default/css/umeditor.css',

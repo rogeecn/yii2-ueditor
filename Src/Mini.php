@@ -12,12 +12,12 @@ class Mini extends InputWidget
     {
         $view = $this->getView();
         MiniAssets::register($view);
-        $view->registerJsFile("@vendor/rogeecn/yii2-ueditor/umeditor1_2_2-utf8-php/lang/{$this->lang}/{$this->lang}.js");
+
         $initScript = $this->getInitScript();
         $view->registerJs($initScript);
 
         unset($this->options['clientOptions']);
-        return Html::textarea($this->name,$this->value,$this->options);
+        return Html::activeTextarea($this->model,$this->attribute,$this->options);
     }
 
     private function getInitScript()

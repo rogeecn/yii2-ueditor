@@ -4,7 +4,6 @@ namespace UEditor;
 
 use UEditor\Assets\FullAssets;
 use yii\helpers\Html;
-use yii\web\AssetManager;
 use yii\widgets\InputWidget;
 
 class Full extends InputWidget
@@ -17,7 +16,7 @@ class Full extends InputWidget
         $view->registerJs($initScript);
 
         unset($this->options['clientOptions']);
-        return Html::textarea($this->name,$this->value,$this->options);
+        return Html::activeTextarea($this->model,$this->attribute,$this->options);
     }
 
     private function getInitScript()
