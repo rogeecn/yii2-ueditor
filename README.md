@@ -30,6 +30,7 @@ Once the extension is installed, simply use it in your code by  :
 ```php
 //use mini editor 
 <?= $form->field($model, 'name')->widget(UEditor\Mini::className());?>
+
 //use full feature editor
 <?= $form->field($model, 'name')->widget(UEditor\Mini::className());?>
 ```
