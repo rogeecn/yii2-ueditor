@@ -1,6 +1,6 @@
 {
     "name": "rogeecn/yii2-ueditor",
-    "description": "baidu ueditor  for yii2 framework",
+    "description": "baidu ueditor for yii2 framework",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","baidu ueditor"],
     "license": "Apache-2.0",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "UEditor\\": ""
+            "UEditor\\": "Src"
         }
     }
 }
