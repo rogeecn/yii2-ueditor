@@ -22,12 +22,14 @@ class Full extends InputWidget
 
     private function getInitScript()
     {
-        $editor_var = Html::getInputId($this->model,$this->attribute);
+        $editor_id = Html::getInputId($this->model,$this->attribute);
         $options = json_encode($this->options['clientOptions']);
+
+        $editor_var = md5($editor_id);
         $js = <<<_JS_
-var ue_{$editor_var} = UE.getEditor('$editor_var',$options);
+var ue_{$editor_var} = UE.getEditor('$editor_id',$options);
 _JS_;
 
-        return [];
+        return $js;
     }
 }
