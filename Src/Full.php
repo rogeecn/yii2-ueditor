@@ -22,7 +22,12 @@ class Full extends InputWidget
     private function getInitScript()
     {
         $editor_id = Html::getInputId($this->model,$this->attribute);
-        $options = json_encode($this->options['clientOptions']);
+        $options = "{";
+        foreach($this->options['clientOptions'] as $key=>$value){
+            $options .= sprintf("%s:%s",$key, json_encode($value)).",";
+        }
+        $options = rtrim($options,',');
+        $options.="}";
 
         $editor_var = md5($editor_id);
         $js = <<<_JS_
