@@ -3,6 +3,7 @@
 namespace UEditor;
 
 use UEditor\Assets\MiniAssets;
+use yii\helpers\Html;
 use yii\widgets\InputWidget;
 
 class Mini extends InputWidget
