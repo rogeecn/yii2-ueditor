@@ -4,9 +4,8 @@ namespace UEditor;
 
 use UEditor\Assets\MiniAssets;
 use yii\helpers\Html;
-use yii\widgets\InputWidget;
 
-class Mini extends InputWidget
+class Mini extends Editor
 {
     public $language = 'zh-cn';
     public function run()
@@ -24,13 +23,7 @@ class Mini extends InputWidget
     private function getInitScript()
     {
         $editor_id = Html::getInputId($this->model,$this->attribute);
-        //$options = json_encode($this->options['clientOptions']);
-        $options = "{";
-        foreach($this->options['clientOptions'] as $key=>$value){
-            $options .= sprintf("%s:%s",$key, json_encode($value)).",";
-        }
-        $options = rtrim($options,',');
-        $options.="}";
+        $options = $this->getOptions();
 
         $editor_var = md5($editor_id);
         $js = <<<_JS_
