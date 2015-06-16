@@ -26,5 +26,6 @@ class Editor extends InputWidget
             $options = rtrim($options,',');
             $options.="}";
         }
+        return $options;
     }
 }
